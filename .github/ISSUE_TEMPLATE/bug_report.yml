@@ -1,0 +1,104 @@
+name: 不具合の報告
+description: Solidra の動作がおかしい、落ちる、結果が正しくない
+title: "[不具合] "
+labels: ["bug", "未確認"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        報告ありがとうございます。このリポジトリは**公開**されています。
+        社外秘の設計データ、ライセンスファイル（.srlic）、購入時のメールアドレスは**貼らないでください**。
+        データを見せないと再現できない場合は、その旨を書いていただければ非公開の送り先をご案内します。
+  - type: input
+    id: version
+    attributes:
+      label: Solidra のバージョン
+      description: ヘルプ → バージョン情報 に出ている番号
+      placeholder: 例 1.0.0
+    validations:
+      required: true
+  - type: dropdown
+    id: edition
+    attributes:
+      label: 版
+      options:
+        - Free
+        - Standard
+        - Pro
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: OS
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: どの作業中に起きましたか
+      options:
+        - 2D スケッチ
+        - パーツ（3D フィーチャー）
+        - アセンブリ
+        - 図面
+        - 読み込み / 書き出し
+        - ライセンス
+        - 画面・操作（リボン、ブラウザ、アングルキューブ、キー操作など）
+        - 起動 / インストール
+        - その他
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: 新規ファイルから起きるまでの操作を順番に書いてください
+      placeholder: |
+        1. 新規 → パーツ
+        2. XY 平面に 2D スケッチで長方形を描く
+        3. 押し出しで「切り取り」を選ぶ
+        4. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待した動作
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の動作
+      description: エラーメッセージはそのまま貼ってください。スクリーンショットも歓迎します
+    validations:
+      required: true
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: 再現性
+      options:
+        - 毎回起きる
+        - ときどき起きる
+        - 1 回だけ起きた
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: ファイル・ログ（任意）
+      description: 再現できる小さなファイル（.srpt / .sras / .srdw / .step）があれば zip にして添付してください。社外秘のデータは添付しないでください
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 確認
+      options:
+        - label: 同じ報告がすでにないか検索しました
+          required: true
+        - label: 社外秘のデータやライセンスファイルを含めていません
+          required: true
