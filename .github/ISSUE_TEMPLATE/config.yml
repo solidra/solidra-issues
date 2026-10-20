@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 使い方の質問
+    url: https://github.com/altezza0929-crypto/solidra-issues/discussions
+    about: 操作の質問や相談は Discussions へどうぞ
+  - name: 購入・ライセンス・社外秘データのご相談
+    url: https://OWNER_SITE/#contact
+    about: 支払い、ライセンスファイル、非公開で見せたいデータは公開の場に書かず、こちらからご連絡ください
