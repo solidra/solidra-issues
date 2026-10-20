@@ -1,0 +1,37 @@
+name: 機能の要望
+description: あると助かる機能や、操作の改善案
+title: "[要望] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        同じ要望がすでにあれば、新しく作らずにその要望に 👍 を付けてください。優先順位の参考にします。
+  - type: dropdown
+    id: area
+    attributes:
+      label: 対象
+      options:
+        - 2D スケッチ
+        - パーツ（3D フィーチャー）
+        - アセンブリ
+        - 図面
+        - 読み込み / 書き出し
+        - 画面・操作
+        - その他
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 困っていること
+      description: 今どんな作業で、何が手間になっていますか
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: こうなってほしい
+      description: ほかの CAD での操作を例に書いていただいても構いません
+    validations:
+      required: true
